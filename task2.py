@@ -120,13 +120,13 @@ def main() -> None:
         "--vocab_word2idx",
         type=str,
         default="vocab_word2idx.json",
-        help="Existing vocab word->idx JSON path",
+        help="Existing vocab word->idx JSON path (default: ./vocab_word2idx.json)",
     )
     parser.add_argument(
         "--vocab_idx2word",
         type=str,
         default="vocab_idx2word.json",
-        help="Existing vocab idx->word JSON path",
+        help="Existing vocab idx->word JSON path (default: ./vocab_idx2word.json)",
     )
     parser.add_argument("--dims", type=str, default="50,100,200,300", help="Comma-separated dimensions")
     parser.add_argument("--out_dir", type=str, default=".", help="Output directory")

@@ -1,0 +1,12 @@
+{
+  "tfidf_svd": {
+    "token_accuracy": 0.8937439431463335,
+    "macro_f1": 0.566774347662569
+  },
+  "raw_svd": {
+    "token_accuracy": 0.8904920857112092,
+    "macro_f1": 0.5539722910591407
+  },
+  "improvement_macro_f1": 0.012802056603428258,
+  "improvement_accuracy": 0.00325185743512435
+}
