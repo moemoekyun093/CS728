@@ -1,0 +1,56 @@
+# CS728 PA2 - Exact experiment commands executed
+# Date range: 2026-03-09 to 2026-03-10
+# Common flags used in every run:
+# --nhid 50 --lr 0.01 --bs 20 --min_length 50 --max_length 200 \
+# --maxiters 50000 --ebs 10000 --cbs 1000 --checkFreq 20 \
+# --seed 52 --valid_seed 12345 --collectDiags --diagBins 60 --satThresh 0.05
+
+python -u train.py --task mem --model rnn --alpha 0.0 --clipstyle nothing \
+  --nhid 50 --lr 0.01 --bs 20 --min_length 50 --max_length 200 \
+  --maxiters 50000 --ebs 10000 --cbs 1000 --checkFreq 20 \
+  --seed 52 --valid_seed 12345 --collectDiags --diagBins 60 --satThresh 0.05 \
+  --name runs/npz/A1_mem_rnn_tanh_noclip
+
+python -u train.py --task mem --model rnn --alpha 0.0 --clipstyle rescale --cutoff 0.05 \
+  --nhid 50 --lr 0.01 --bs 20 --min_length 50 --max_length 200 \
+  --maxiters 50000 --ebs 10000 --cbs 1000 --checkFreq 20 \
+  --seed 52 --valid_seed 12345 --collectDiags --diagBins 60 --satThresh 0.05 \
+  --name runs/npz/A2_mem_rnn_tanh_clip005
+
+python -u train.py --task mem --model rnn --alpha 0.0 --clipstyle rescale --cutoff 0.01 \
+  --nhid 50 --lr 0.01 --bs 20 --min_length 50 --max_length 200 \
+  --maxiters 50000 --ebs 10000 --cbs 1000 --checkFreq 20 \
+  --seed 52 --valid_seed 12345 --collectDiags --diagBins 60 --satThresh 0.05 \
+  --name runs/npz/A3_mem_rnn_tanh_clip001
+
+python -u train.py --task mem --model gru --alpha 0.0 --clipstyle nothing --diagGates \
+  --nhid 50 --lr 0.01 --bs 20 --min_length 50 --max_length 200 \
+  --maxiters 50000 --ebs 10000 --cbs 1000 --checkFreq 20 \
+  --seed 52 --valid_seed 12345 --collectDiags --diagBins 60 --satThresh 0.05 \
+  --name runs/npz/A4_mem_gru_noclip
+
+python -u train.py --task mem --model gru --alpha 0.0 --clipstyle rescale --cutoff 0.05 --diagGates \
+  --nhid 50 --lr 0.01 --bs 20 --min_length 50 --max_length 200 \
+  --maxiters 50000 --ebs 10000 --cbs 1000 --checkFreq 20 \
+  --seed 52 --valid_seed 12345 --collectDiags --diagBins 60 --satThresh 0.05 \
+  --name runs/npz/A5_mem_gru_clip005
+
+python -u train.py --task mul --model rnn --alpha 0.0 --clipstyle nothing \
+  --nhid 50 --lr 0.01 --bs 20 --min_length 50 --max_length 200 \
+  --maxiters 50000 --ebs 10000 --cbs 1000 --checkFreq 20 \
+  --seed 52 --valid_seed 12345 --collectDiags --diagBins 60 --satThresh 0.05 \
+  --name runs/npz/B1_mul_rnn_tanh_noclip
+
+python -u train.py --task mul --model gru --alpha 0.0 --clipstyle nothing --diagGates \
+  --nhid 50 --lr 0.01 --bs 20 --min_length 50 --max_length 200 \
+  --maxiters 50000 --ebs 10000 --cbs 1000 --checkFreq 20 \
+  --seed 52 --valid_seed 12345 --collectDiags --diagBins 60 --satThresh 0.05 \
+  --name runs/npz/B2_mul_gru_noclip
+
+# Driver command used:
+# . .venv/bin/activate && ./run_required_experiments.sh > runs/logs/all_runs_driver.log 2>&1
+
+# Analysis/report commands used:
+# . .venv/bin/activate && python analyze_results.py
+# . .venv/bin/activate && python build_report.py
+# cd report && tectonic pa2_report.tex

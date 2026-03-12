@@ -1,0 +1,79 @@
+[
+  {
+    "run": "A1_mem_rnn_tanh_noclip",
+    "status": "ok",
+    "best_valid_error_pct": 100.0,
+    "last_valid_error_pct": 100.0,
+    "last_rho": 14.195817947387695,
+    "grad_log10_mean": -4.173065185546875,
+    "sat_mean": 0.016787413507699966,
+    "zsat_mean": null,
+    "rsat_mean": null
+  },
+  {
+    "run": "A2_mem_rnn_tanh_clip005",
+    "status": "ok",
+    "best_valid_error_pct": 100.0,
+    "last_valid_error_pct": 100.0,
+    "last_rho": 1.1389210224151611,
+    "grad_log10_mean": -4.562341690063477,
+    "sat_mean": 0.6280170679092407,
+    "zsat_mean": null,
+    "rsat_mean": null
+  },
+  {
+    "run": "A3_mem_rnn_tanh_clip001",
+    "status": "ok",
+    "best_valid_error_pct": 100.0,
+    "last_valid_error_pct": 100.0,
+    "last_rho": 1.1193914413452148,
+    "grad_log10_mean": -4.513660907745361,
+    "sat_mean": 0.6105234026908875,
+    "zsat_mean": null,
+    "rsat_mean": null
+  },
+  {
+    "run": "A4_mem_gru_noclip",
+    "status": "ok",
+    "best_valid_error_pct": 100.0,
+    "last_valid_error_pct": 100.0,
+    "last_rho": 2.0122570991516113,
+    "grad_log10_mean": -6.295962333679199,
+    "sat_mean": 0.5381590127944946,
+    "zsat_mean": 0.1817544400691986,
+    "rsat_mean": 0.4555945098400116
+  },
+  {
+    "run": "A5_mem_gru_clip005",
+    "status": "ok",
+    "best_valid_error_pct": 100.0,
+    "last_valid_error_pct": 100.0,
+    "last_rho": 1.29425048828125,
+    "grad_log10_mean": -4.303895950317383,
+    "sat_mean": 0.8497984409332275,
+    "zsat_mean": 0.12458008527755737,
+    "rsat_mean": 0.4924551546573639
+  },
+  {
+    "run": "B1_mul_rnn_tanh_noclip",
+    "status": "ok",
+    "best_valid_error_pct": 25.899999618530273,
+    "last_valid_error_pct": 39.599998474121094,
+    "last_rho": 0.7051136493682861,
+    "grad_log10_mean": -11.953508377075195,
+    "sat_mean": 0.9385526180267334,
+    "zsat_mean": null,
+    "rsat_mean": null
+  },
+  {
+    "run": "B2_mul_gru_noclip",
+    "status": "ok",
+    "best_valid_error_pct": 24.25,
+    "last_valid_error_pct": 39.18000030517578,
+    "last_rho": 0.08084442466497421,
+    "grad_log10_mean": -11.957351684570312,
+    "sat_mean": 0.9946516752243042,
+    "zsat_mean": 0.11928950250148773,
+    "rsat_mean": 0.49892231822013855
+  }
+]
